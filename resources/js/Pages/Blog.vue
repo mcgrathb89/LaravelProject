@@ -3,10 +3,11 @@
         <template #header>
             <br />
             <form
-                @submit.prevent="addPost"
+                method="POST"
+                action="/blogaction"
                 class="bg-grey shadow-md rounded px-8 pt-6 pb-8 mb-4"
-                id="postsForm"
             >
+                <input type="hidden" name="_token" :value="csrf" />
                 <h2
                     class="font-bold text-xl text-purple-800 leading-tight text-center"
                 >
@@ -15,7 +16,7 @@
                 <br /><br />
                 <label class="text-black-600 font-light">Post Title</label>
                 <input
-                    v-model="posts.title"
+                    name="title"
                     type="text"
                     placeholder="Enter your post title here..."
                     class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"
@@ -24,7 +25,7 @@
                 <label class="text-black-600 font-light">Post Body</label>
                 <br />
                 <textarea
-                    v-model="posts.body"
+                    name="body"
                     class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
                     rows="4"
                     placeholder="Tell us about your day..."
@@ -88,6 +89,9 @@ export default {
     },
     data() {
         return {
+            csrf: document
+                .querySelector('meta[name="csrf-token"]')
+                .getAttribute("content"),
             moment: moment,
             posts: [],
             post: {
@@ -102,19 +106,6 @@ export default {
         axios
             .get("./api/posts")
             .then((response) => (this.posts = response.data));
-    },
-
-    methods: {
-        async addPost() {
-            const response = await axios.post("./api/posts", this.posts);
-            if (response === 201) {
-                Toast.fire({
-                    icon: "success",
-                    title: response.data,
-                });
-                document.getElementById("postForm").reset();
-            }
-        },
     },
 };
 </script>
