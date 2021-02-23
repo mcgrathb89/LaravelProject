@@ -21170,7 +21170,11 @@ var _hoisted_2 = {
   "class": "bg-grey shadow-md rounded px-8 pt-6 pb-8 mb-4"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h2 class=\"font-bold text-xl text-purple-800 leading-tight text-center\"> Create New Blog Post </h2><br><br><label class=\"text-black-600 font-light\">Post Title</label><input name=\"title\" type=\"text\" placeholder=\"Enter your post title here...\" class=\"w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500\"><br><label class=\"text-black-600 font-light\">Post Body</label><br><textarea name=\"body\" class=\"w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none\" rows=\"4\" placeholder=\"Tell us about your day...\"></textarea><br><br><button type=\"submit\" class=\"bg-blue-600 text-gray-200 rounded hover:bg-blue-500 px-4 py-2 focus:outline-none\"> Post </button><br><br><br><hr><br><h2 class=\"font-semibold text-xl text-grey-600 leading-tight text-center\"> Recent Posts </h2><br><hr><br><br>", 22);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h2 class=\"font-bold text-xl text-purple-800 leading-tight text-center\"> Create New Blog Post </h2><br><br><label class=\"text-black-600 font-light\">Post Title</label><input name=\"title\" type=\"text\" placeholder=\"Enter your post title here...\" class=\"w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500\"><br><label class=\"text-black-600 font-light\">Post Body</label><br><textarea name=\"body\" class=\"w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none\" rows=\"4\" placeholder=\"Tell us about your day...\"></textarea><br><br><button type=\"submit\" class=\"bg-blue-600 text-gray-200 rounded hover:bg-blue-500 px-4 py-2 focus:outline-none\"> Post </button><br><br><br><hr><br><h2 class=\"font-semibold text-xl text-grey-600 leading-tight text-center\"> Recent Posts </h2><br><hr><br>", 21);
+
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br", null, null, -1
+/* HOISTED */
+);
 
 var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br", null, null, -1
 /* HOISTED */
@@ -21184,15 +21188,11 @@ var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 /* HOISTED */
 );
 
-var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br", null, null, -1
+var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("hr", null, null, -1
 /* HOISTED */
 );
 
-var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("hr", null, null, -1
-/* HOISTED */
-);
-
-var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "w-full pt-16 pb-6 text-sm text-center md:text-left fade-in"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
   "class": "text-gray-500 no-underline hover:no-underline",
@@ -21215,20 +21215,20 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       , ["value"]), _hoisted_3, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.posts, function (post) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
           key: post.body
-        }, [_hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("strong", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("h5", {
+        }, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("strong", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("h5", {
           key: post.title
         }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
         /* TEXT */
         ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.body) + " ", 1
         /* TEXT */
-        ), _hoisted_26, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("small", {
+        ), _hoisted_25, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("small", {
           key: post.created_at
         }, "Posted " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.moment(post.created_at).fromNow()), 1
         /* TEXT */
-        )), _hoisted_27, _hoisted_28, _hoisted_29]);
+        )), _hoisted_26, _hoisted_27, _hoisted_28]);
       }), 128
       /* KEYED_FRAGMENT */
-      ))]), _hoisted_30];
+      ))]), _hoisted_29];
     }),
     _: 1
     /* STABLE */

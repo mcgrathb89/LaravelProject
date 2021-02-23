@@ -48,7 +48,7 @@
                 </h2>
                 <br />
                 <hr />
-                <br /><br />
+                <br />
 
                 <div v-for="post in posts" :key="post.body">
                     <br />

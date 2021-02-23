@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,47 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('posts', 'App\Http\Controllers\BlogController');
 
+
+Route::get('/posts', function(){
+ return Post::all(); 
+});
+
+
+
+Route::post('/posts', function() {
+    request()->validate([
+        'title' => 'required',
+        'body' => 'required'
+    ]);
+
+    return Post::create([
+        'title' => request('title'),
+        'body' => request('body')
+    ]);
+});
+
+Route::put('/posts/{post}', function(Post $post){
+
+    request()->validate([
+        'title' => 'required',
+        'body' => 'required'
+    ]);
+
+    $success =  $post->update([
+        'title' => request('title'),
+        'body' => request('body')
+    ]);
+
+    return [
+        'success' => $success
+    ];
+});
+
+Route::put('/posts/{post}', function(Post $post){
+
+    $success =  $post->delete();
+
+    return [
+        'success' => $success
+    ]; 
+});
