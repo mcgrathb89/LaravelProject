@@ -33,7 +33,7 @@
                 <br /><br />
                 <button
                     type="submit"
-                    class="bg-blue-600 text-gray-200 rounded hover:bg-blue-500 px-4 py-2 focus:outline-none"
+                    class="bg-purple-800 text-gray-200 rounded hover:bg-purple-500 px-4 py-2 focus:outline-none"
                 >
                     Post
                 </button>
