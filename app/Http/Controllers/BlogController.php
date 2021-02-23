@@ -16,7 +16,7 @@ class BlogController extends Controller
 
         $posts = new Post();
 
-        $posts->title = request('user_id');
+        $posts->user_id = request('user_id');
         $posts->title = request('title');
         $posts->body = request('body');
         $posts->save();
