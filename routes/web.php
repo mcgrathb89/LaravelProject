@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\SystemInfoController;
 use Illuminate\Foundation\Application;
-use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -32,6 +32,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/blog', function () {
     return Inertia::render('Blog');
 })->name('blog');
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/telescope', function () {
+    return Inertia::render('/telescope');
+})->name('telescope');
 
 
 Route::post('/blogaction','App\Http\Controllers\BlogController@store');
